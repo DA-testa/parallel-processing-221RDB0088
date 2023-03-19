@@ -1,7 +1,6 @@
 def parallel_processing(n, m, data):
-    threads = [0] * n  # list to hold the finish time of each thread
-    result = []  # list to hold the output pairs
-
+    threads = [0] * n  #list to hold the finish time of each thread
+    result = []  #list to hold the output
     for i in range(m):
         next_thread = 0
         for j in range(1, n):
@@ -13,14 +12,14 @@ def parallel_processing(n, m, data):
     return result
 
 def main():
-    # get inputs
+    #get inputs
     n, m = map(int, input().split())
     data = list(map(int, input().split()))
 
-    # run the function
+    #run the function
     result = parallel_processing(n, m, data)
 
-    # print results
+    #print  results
     for thread, start_time in result:
         print(thread, start_time)
 
